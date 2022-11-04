@@ -23,8 +23,9 @@ function LoadCountries() {
   return (
     <div>
       {
-        // countries.map(country => console.log(country[0]))
-        countries.map(country => <AllCountries name={country.name.common} area={country.area} flags={country.flags.png}></AllCountries>)
+        // countries.map(country => console.log(country))
+        // countries.map(country => <AllCountries name={country.name.common} area={country.area} flags={country.flags.png}></AllCountries>)
+        countries.map(country => <AllCountries country={country}></AllCountries>)
       }
     </div>
   )
@@ -32,12 +33,18 @@ function LoadCountries() {
 
 
 function AllCountries(props) {
-  console.log(props)
+  const { flags, area, name } = props.country;
+  const { common } = name;
+  const {png} = flags;
+  console.log(flags)
+  
+  // console.log(area)
+  // console.log(name)
   return (
     <div className='country'>
-      <h3>Countries : {props.name}</h3>
-      <h3>Area : {props.area}</h3>
-      <img src="{props.flags}" alt="" />
+      <h3>Countries : {common}</h3>
+      <h3>Area : {area}</h3>
+      <img src="{png}" alt="" />
     </div>
   )
 }
