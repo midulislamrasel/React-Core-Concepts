@@ -1,59 +1,69 @@
-// import logo from './logo.svg';
-import { useEffect, useState } from 'react';
+// // import logo from './logo.svg';
+// import { useEffect, useState } from 'react';
 import './App.css';
+
+import Country from "./components/Country/Country";
+import Parson from "./components/Person/Parson";
+
 function App() {
   return (
-    <div className='App'>
-      <h1>Hello React</h1>
-      <LoadCountries></LoadCountries>
-      <h4>Details</h4>
+    <div className=''>
+      <Country></Country>
     </div>
   );
 }
 
 // =======RestCountries API=========
-function LoadCountries() {
-  const [countries, setCountries] = useState([]);
-  // useEffect( () =>{},[])
-  useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all')
-      .then(response => response.json())
-      .then(data => setCountries(data));
-  }, [])
-  return (
-    <div>
-      {
-        // countries.map(country => console.log(country))
-        // countries.map(country => <AllCountries name={country.name.common} area={country.area} flags={country.flags.png}></AllCountries>)
-        countries.map(country => <AllCountries country={country}></AllCountries>)
-      }
-    </div>
-  )
-}
+
+// import { useEffect, useState } from 'react';
+// import './App.css';
+// function App() {
+//   return (
+//     <div className='App'>
+//       <h1>Hello React</h1>
+//       <LoadCountries></LoadCountries>
+//       <h4>Details</h4>
+//     </div>
+//   );
+// }
 
 
-function AllCountries(props) {
-  const { flags, area, name } = props.country;
-  const { common } = name;
-  const {png} = flags;
-  console.log(flags)
-  
-  // console.log(area)
-  // console.log(name)
-  return (
-    <div className='country'>
-      <h3>Countries : {common}</h3>
-      <h3>Area : {area}</h3>
-      <img src="{png}" alt="" />
-    </div>
-  )
-}
+// function LoadCountries() {
+//   const [countries, setCountries] = useState([]);
+//   // useEffect( () =>{},[])
+//   useEffect(() => {
+//     fetch('https://restcountries.com/v3.1/all')
+//       .then(response => response.json())
+//       .then(data => setCountries(data));
+//   }, [])
+//   return (
+//     <div>
+//       {
+//         // countries.map(country => console.log(country))
+//         // countries.map(country => <AllCountries name={country.name.common} area={country.area} flags={country.flags.png}></AllCountries>)
+//         countries.map(country => <AllCountries country={country}></AllCountries>)
+//       }
+//     </div>
+//   )
+// }
 
 
+// function AllCountries(props) {
+//   const { flags, area, name } = props.country;
+//   const { common } = name;
+//   const {png} = flags;
+//   console.log(flags)
 
-
-
-
+//   // console.log(area)
+//   // console.log(name)
+//   return (
+//     <div className='country'>
+//       <h3>Countries : {common}</h3>
+//       <h3>Area : {area}</h3>
+//       <img src="{png}" alt="" />
+//     </div>
+//   )
+// }
 
 
 

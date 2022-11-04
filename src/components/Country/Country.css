@@ -1,0 +1,13 @@
+.all_country{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.country{
+    background-color: goldenrod;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    margin: 0.6rem;
+    border-radius: 1rem;
+}
