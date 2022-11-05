@@ -1,17 +1,36 @@
 // // import logo from './logo.svg';
 // import { useEffect, useState } from 'react';
 import './App.css';
+import Countries from './components/Countries/Countries';
 
-import Country from "./components/Country/Country";
-import Parson from "./components/Person/Parson";
 
 function App() {
   return (
-    <div className=''>
-      <Country></Country>
+    <div>
+
+      <Countries></Countries>
+  
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // =======RestCountries API=========
 
